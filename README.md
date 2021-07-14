@@ -1,8 +1,8 @@
 # Group-Project-1
 
 ##
-Quiz Game 
-Quiz game will call an api to generate random questions for various trivia categories. Will generate a random cocktail to drink while playing.
+Social Drinking Quiz Game
+Quiz game will call a trivia api to generate random questions for various trivia categories. The Users may also use a function that will call a cocktail api to generate a random cocktail to drink while playing. 
 
 ## User Story
 
