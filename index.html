@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,42 +15,43 @@
             <h2>QUIZ</h2>
             <nav>
                 <button id="startbtn"> Start Quiz</button>
+                <button id="modal-drink">What should I drink?</button>
             </nav>
         </div>
-                
+
         <div id="quiz">
             <div id="timer">Time left: </div>
-            <div id= "questions" class="py-2 h5">
-                    <b>Questions Placeholder</b>
-                </div>
-                <div id="options">
-                    <button id="a" onclick="checkAnswer('a')" class="options">A</button> 
-                
-                    <button id="b" onclick="checkAnswer('b')" class="options">B</button> 
-                
-                    <button id="c" onclick="checkAnswer('c')" class="options">C</button> 
-                
-                    <button id="d" onclick="checkAnswer('d')" class="options">D</button> 
-                </div>
+            <div id="questions" class="py-2 h5">
+                <b>Questions Placeholder</b>
             </div>
-        
-            <div id="result"></div>
-        </div>
-                
-        <div id="gameover">
+            <div id="options">
+                <button id="a" onclick="checkAnswer('a')" class="options">A</button>
 
-            <div id="finalScore"></div>
-            <input type="text" size = "40" placeholder="Enter your initials" name="intials" id="initials"/>
-            <button id="submitScore">Submit Score</button>
+                <button id="b" onclick="checkAnswer('b')" class="options">B</button>
+
+                <button id="c" onclick="checkAnswer('c')" class="options">C</button>
+
+                <button id="d" onclick="checkAnswer('d')" class="options">D</button>
+            </div>
         </div>
-        <div id="highscoreContainer">
+
+        <div id="result"></div>
+    </div>
+
+    <div id="gameover">
+
+        <div id="finalScore"></div>
+        <input type="text" size="40" placeholder="Enter your initials" name="intials" id="initials" />
+        <button id="submitScore">Submit Score</button>
+    </div>
+    <div id="highscoreContainer">
         <div id="high-scorePage">
             <div id="highscore-header">
                 <h3>User Initials</h3>
                 <h3>Score</h3>
             </div>
-            <div id = "highscore-initials"></div>
-            <div id = "highscore-score"></div>
+            <div id="highscore-initials"></div>
+            <div id="highscore-score"></div>
         </div>
         <div id="endGameBtns">
             <button id="playAgain" onclick="replayQuiz()">Play Again</button>
@@ -57,7 +59,7 @@
         </div>
     </div>
     </div>
-    <script src="javascript.js"></script> 
+    <script src="script.js"></script>
 </body>
 
 <footer>
