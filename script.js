@@ -1,4 +1,3 @@
-
 var drinkButton = document.getElementById("modal-drink")
 
 function generateDrink() {
