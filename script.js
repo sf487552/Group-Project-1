@@ -29,9 +29,6 @@ async function sendApiRequest(){
   console.log(data)
 }
 
-function useApiData(data) {
-  document.querySelector("#category").innerHTML = `Category: ${data.results[0].category}`
-  document.querySelector("#difficulty").innerHTML = `Category: ${data.results[0].difficulty}`
 
-}
 
+  
