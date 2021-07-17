@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //EX:https://opentdb.com/api.php?amount=50&category=11&type=multiple
 
 //"https://opentdb.com/api.php?amount=" +  + "&category=" +  + "&difficulty=" + + "&type=multiple"
@@ -22,42 +21,85 @@ max - 50
 */
 
 /*Variables*/
-var currentQuestion = 0;
-
-var container = document.getElementById('quizContainer');
-var questionEl = document.getElementById('question');
+var quizBody = document.getElementById("quiz");
+var container = document.getElementById('question-block');
+var question = document.getElementById('question-text');
 var opt1 = document.getElementById('a');
 var opt2 = document.getElementById('b');
 var opt3 = document.getElementById('c');
 var opt4 = document.getElementById('d');
 //var nextButton = document.getElementById('nextButton');
 
+/*Start quiz function, need to prvent default*/
+var startQuizButton = document.getElementById("startQuizButton");
+var startQuizDiv = document.getElementById("startpage");
 
-/*Load questions*/
-function loadQuestion (questionIndex) {
-	var q = questions[questionIndex];
-	questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
-	opt1.textContent = q.a;
-	opt2.textContent = q.b;
-	opt3.textContent = q.c;
-	opt4.textContent = q.d;
-};
+/*
+Number of questions: 
+Min - 1
+max - 50
+*/
 
+/*Quiz variables*/
+var categories = document.getElementById("stacked-categories")
+var difficulty = document.getElementById("stacked-difficulty")
+//var numQuest = document.getElementById("field-questions")
+console.log(categories.value)
+console.log(difficulty.value)
 
-window.onload = sendApiRequest
-async function sendApiRequest(){
-  var response = await fetch ("https://opentdb.com/api.php?amount=50&type=multiple&encode=url3986");
-  console.log(response)
-  var data = await response.json()
-  console.log(data)
+/*Function for start quiz and get appropriate menu selections*/
+function startQuiz(){
+
+  if (categories.value === "General Knowledge") {
+        categories = "9"
+    
+  } else if 
+      (categories.value === "Film") {
+        categories = "11"
+      } else if 
+      (categories.value === "Music") {
+        categories = "12" 
+      } else if 
+      (categories.value === "TV") {
+        categories = "14"
+      } else if 
+      (categories.value === "Videogames") {
+        categories = "15"
+      } else {
+      (categories.value === "Sports") 
+        categories = "21"
+      }
+      console.log("https://opentdb.com/api.php?amount=25&category=" + categories + "&difficulty=" + difficulty.value.toLowerCase() + "&type=multiple")
+ 
+  /*Quiz api fetch*/ 
+   fetch("https://opentdb.com/api.php?amount=5&category=" + categories + "&difficulty=" + difficulty.value.toLowerCase() + "&type=multiple")
+  
+  /*populate the quiz block with the category and questions*/ 
+ .then(res => {
+     return res.json();
+   })
+   .then(data => {
+     console.log(data);
+     for (let i = 0; i < data.results.length; i++) {
+       question.textContent = data.results[i].question
+       opt1.innerHTML = "A: " + data.results[i].correct_answer;
+       opt2.innerHTML = "B: " + data.results[i].incorrect_answers[0];
+       opt3.innerHTML = "C: " + data.results[i].incorrect_answers[1];
+       opt4.innerHTML = "D: " + data.results[i].incorrect_answers[2];
+    };
+       
+     })
+  startQuizDiv.style.display = "none";
+  quizBody.style.display = "block";
 }
 
-
-
-
-
+/*START QUIZ*/
+startQuizButton.addEventListener("click",function(event) {
+event.preventDefault()
+startQuiz()
+});
   
-=======
+
 var drinkButton = document.getElementById("modal-drink")
 
 function generateDrink() {
@@ -74,26 +116,26 @@ function generateDrink() {
 
 drinkButton.addEventListener("click", generateDrink)
 
-// Get the modal
+/*Get the modal*/
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
+/*Get the button that opens the modal*/
 var btn = document.getElementById("modal-drink");
 
-// Get the <span> element that closes the modal
+/*Get the <span> element that closes the modal*/
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
+/*When the user clicks on the button, open the modal*/
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+/*When the user clicks on <span> (x), close the modal*/
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+/* When the user clicks anywhere outside of the modal, close it*/
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -109,5 +151,4 @@ function displayCocktail(myModal) {
             modal.html (result);
         }
     })
-}
->>>>>>> 16057530496d2228a788770050696cf03a9ba57d
+  }

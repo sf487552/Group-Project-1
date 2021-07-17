@@ -57,21 +57,20 @@
                     <label for="stacked-remember" class="pure-checkbox">
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
-                    <button type="submit" class="pure-button pure-button-primary">Start Quiz</button>
+                    <button type="submit" class="pure-button pure-button-primary" id="startQuizButton" >Start Quiz</button>
                 </div>
                 <div id="quiz">
-                    <div id="timer">Time left: </div>
-                    <div id="questions" class="py-2 h5">
-                        <b>Questions Placeholder</b>
+                    <div id="question-block" class="py-2 h5">
+                        <p id="question-text">Questions Placeholder</p>
                     </div>
                     <div id="options">
-                        <button id="a" onclick="checkAnswer('a')" class="options">A</button>
+                        <button id="a" onclick="checkAnswer('a')" class="options"> </button>
 
-                        <button id="b" onclick="checkAnswer('b')" class="options">B</button>
+                        <button id="b" onclick="checkAnswer('b')" class="options"> </button>
 
-                        <button id="c" onclick="checkAnswer('c')" class="options">C</button>
+                        <button id="c" onclick="checkAnswer('c')" class="options"> </button>
 
-                        <button id="d" onclick="checkAnswer('d')" class="options">D</button>
+                        <button id="d" onclick="checkAnswer('d')" class="options"> </button>
                     </div>
                 </div>
             </div>
@@ -101,12 +100,13 @@
         </div>
     </div>
     </div>
-    <script src="javascript.js"></script> 
+    
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
-
 <footer>
-    <h2>asdf</h2>
-    <p>&copy; asdf</p>
+    <h2></h2>
+    <p>&copy;</p>
 </footer>
 
 </html>
