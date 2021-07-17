@@ -6,6 +6,15 @@
     box-sizing: border-box
     
 }
+/* #mid-quiz-options {
+    margin-right: 20px;
+    padding: 20px;
+    width: 35%;
+    height: 100%;
+    float: right;
+    background-color: #555;
+    color: #ddd;
+} */
 
 body {
     background-color: white;
@@ -25,7 +34,7 @@ body {
     padding-top: 10px;
     margin: 0 auto;
 }
-.pure-form {
+#quiz-form {
     background-color: #555;
     color: #ddd;
     border-radius: 15 px;

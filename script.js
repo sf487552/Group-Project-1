@@ -1,4 +1,5 @@
 var drinkButton = document.getElementById("modal-drink")
+var instructions = document.getElementById("modal-how")
 
 function generateDrink() {
     var cocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
@@ -13,3 +14,6 @@ function generateDrink() {
 }
 
 drinkButton.addEventListener("click", generateDrink)
+instructions.addEventListener("click", function () {
+
+});
