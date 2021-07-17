@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
@@ -292,4 +293,459 @@ footer h2 {
         width: 100%;
         word-spacing: 2px
     }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+    
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #555;
+    color: #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 700px;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+.pure-form {
+    background-color: #555;
+    color: #ddd;
+    border-radius: 15 px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1200px;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+.container>b {
+    font-size: 32px
+}
+
+b{
+    color: whitesmoke;
+    text-shadow: .5px .5px white;
+    text-align: center;
+}
+
+.startpage{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+button {
+    display:table-row;
+    font-family: sans-serif;
+    background-color: #21bf73;
+    border-radius: 5px;
+    border: 3px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    width: 200px;
+    margin-top: 3px;
+}
+
+button:hover{
+    box-shadow: 4px 3px 6px whitesmoke;
+}
+
+input{
+    text-align: center;
+}
+
+nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: inline-start;    
+}
+
+#options {
+    display: table-row;
+}
+
+.options {
+    position: relative;
+    padding-left: 40px
+}
+
+#options button {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    cursor: pointer
+}
+
+.options input {
+    opacity: 0
+}
+
+.checkmark {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #555;
+    border: 1px solid #ddd;
+    border-radius: 50%
+}
+
+.options input:checked~.checkmark:after {
+    display: block
+}
+
+.options .checkmark:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 300ms ease-in-out 0s
+}
+
+.options input[type="radio"]:checked~.checkmark {
+    background: #21bf73;
+    transition: 300ms ease-in-out 0s
+}
+
+.options input[type="radio"]:checked~.checkmark:after {
+    transform: translate(-50%, -50%) scale(1)
+}
+
+.btn-primary {
+    background-color: #555;
+    color: #ddd;
+    border: 1px solid #ddd
+}
+
+.btn-primary:hover {
+    background-color: #21bf73;
+    border: 1px solid #21bf73
+}
+
+.btn-success {
+    padding: 5px 25px;
+    background-color: #21bf73
+}
+
+#startpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer{
+    font-family: sans-serif;
+    background-color: #21bf73;
+    color: #eeeeee;
+    font-size: x-large;
+    text-shadow: .5px .5px black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#quiz {
+    display: none;
+}
+
+#questions {
+    width: 75%;
+    padding: 10px;
+    font-size: large;
+}
+
+#result {
+    display: none;
+}
+
+#gameover {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#highScore{
+    height: 1.5rem;
+    border: groove 2px;
+}
+
+#high-scorePage{
+    display: none;
+    width: 50%;
+    border: solid;
+    border-color: silver;
+    border-bottom-style: groove;
+    padding-bottom: .3rem;
+    background: lightsteelblue;
+}
+
+#highscore-header{
+    display:flex;
+    justify-content: space-around;
+    border-bottom-style: outset;
+    margin-bottom: .5rem;
+    background-color: #5e6df1;
+    color: #eeeeee;
+    font-family: sans-serif;
+}
+
+#highscoreContainer{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#initials{
+    margin: .5rem;
+    height: 1.75rem;
+}
+
+#highscore-initials{
+    display: inline-block;
+    padding-left: 9.5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#highscore-score{
+    float: right;
+    padding-right: 8.75rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#finalScore{
+    padding-bottom: 0.5rem;
+    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#endGameBtns{
+    display: none;
+}
+
+#highscore-page {
+    padding: 10px;
+}
+
+#endGameBtns {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Momentum Grotesk', 'Neue Haas Grotesk', 'Swiss721';
+    text-align: center;
+    color: black;
+}
+
+footer h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  *,
+*:before,
+*:after {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#container.closed header {
+  cursor: pointer;
+}
+header {
+  cursor: pointer;
+}
+
+.header {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: center / cover;
+  background-image: "";
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 0px;
+}
+
+#container.closed .title {
+  padding: 40px 20px 10px 20px;
+  margin-top: -87px;
+  color: white;
+  border: none;
+}
+
+.title:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  opacity: 0;
+}
+
+#container.closed .title:before {
+  opacity: 1;
+}
+
+article {
+  padding: 25px 30px;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+#container.closed article {
+  max-height: 0px;
+  padding: 0 30px;
+}
+
+.ingredients {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+  padding-left: 4px;
+  font-size: 0.9rem;
+}
+
+.ingredients > li {
+  list-style-type: none;
+  display: flex;
+  margin: 4px 0px;
+}
+
+.ingredients > li > .amount {
+  width: 80px;
+  color: #1976d2;
+}
+
+.preperation > div {
+  margin-bottom: 10px;
+}
+
+@media(max-width:576px) {
+    .question {
+        width: 100%;
+        word-spacing: 2px
+    }
+>>>>>>> 16057530496d2228a788770050696cf03a9ba57d
 }
