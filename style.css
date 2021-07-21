@@ -298,6 +298,10 @@ footer h2 {
     text-align: center;
 }
 
+.hide {
+    display: none;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

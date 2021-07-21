@@ -12,22 +12,20 @@
     <div class="container mt-sm-5 my-1">
         <div id="startpage">
             <h2>QUIZ</h2>
+            <button id="how">How to play</button>
+            <h3 class="hide" id="how-to-text">This is a fun trivia game you can play with your friends! To begin, simply
+                select a
+                category
+                and
+                how
+                difficult you would like the questions to be and click the "Start Quiz" button. If you would
+                like to
+                make it more entertaining, click on the "What should I drink" button to have a random
+                cocktail
+                loaded
+                that you can make and enjoy while playing!</h3>
             <nav>
                 <button id="modal-drink">What should I drink?</button>
-                <button id="modal-how">How to play</button>
-            </nav>
-            <div id="instructions-modal">
-                <div class="modal-content">
-                    <p>This is a fun trivia game you can play with your friends! To begin, simply select a category and
-                        how
-                        difficult you would like the questions to be and click the "Start Quiz" button. If you would
-                        like to
-                        make it more entertaining, click on the "What should I drink" button to have a random cocktail
-                        loaded
-                        that you can make and enjoy while playing!</p>
-                    <span class="close">&times;</span>
-                </div>
-            </div>
             </nav>
         </div>
         <div id="myModal" class="modal">
@@ -71,7 +69,12 @@
                     <label for="stacked-remember" class="pure-checkbox">
                 </div>
                 <div class="pure-u-1 pure-u-md-1-3">
-                    <button type="submit" class="pure-button pure-button-primary" id="startQuizButton" >Start Quiz</button>
+                    <label for="multi-how-many">How many Questions(max of 50)?</label>
+                    <input type="text" id="multi-how-many" class="pure-u-1-2" />
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3">
+                 <button type="submit" class="pure-button pure-button-primary" id="startQuizButton" >Start Quiz</button>
+
                 </div>
                 <div id="quiz">
                     <div id="question-block" class="py-2 h5">
@@ -119,8 +122,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 <footer>
-    <h2></h2>
-    <p>&copy;</p>
 </footer>
 
 </html>
