@@ -139,13 +139,16 @@ function startQuiz() {
     (categories.value === "Sports")
     categories = "21"
   }
+
   
   //Quiz api fetch
   fetch("https://opentdb.com/api.php?amount=" + amount.value + "&category=" + categories + "&difficulty=" + difficulty.value.toLowerCase() + "&type=multiple")
+
     //populate the quiz block with the category and questions 
     .then(res => {
       return res.json();
     })
+
     .then((loadedQuestions) => {
       console.log(loadedQuestions)
       questions = loadedQuestions.results.map((loadedQuestion) => {
@@ -325,12 +328,3 @@ ruleList.addEventListener("click", function(event) {
 
 // Calls init to retrieve data and render it to the page on load
 init()
-
-
-
-
-
-
-
-
-
