@@ -13,95 +13,110 @@
     <div class="container mt-sm-5 my-1">
         <div id="startpage">
             <h2>QUIZ</h2>
-            <button id="how">How to play</button>
-            <h3 class="hide" id="how-to-text">This is a fun trivia game you can play with your friends! To begin, simply
-                select a
-                category
-                and
-                how
-                difficult you would like the questions to be and click the "Start Quiz" button. If you would
-                like to
-                make it more entertaining, click on the "What should I drink" button to have a random
-                cocktail
-                loaded
-                that you can make and enjoy while playing!</h3>
-            <nav>
-                <button id="modal-drink">What should I drink?</button>
+            <nav>  
+              <button id="how">How to play</button>
+                <h3 class="hide" id="how-to-text">
+                  This is a fun trivia game you can play with your friends! To begin, simply
+                  select a category and how difficult you would like the questions to be and click the "Start Quiz" button. If you would like to
+                  make it more entertaining, click on the "What should I drink" button to have a random cocktail loaded
+                  that you can make and enjoy while playing!
+                </h3>
+              <button id="modal-drink">What should I drink?</button>
             </nav>
         </div>
         <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <div class="closed" id="container">
-                    <header id="toggle">
-                        <div class="header"></div>
-                        <div class="title">cocktail name</div>
-                    </header>
-                    <article>
-                        <ul class="ingredients"></ul>
-                        <div class="preperation"></div>
-                    </article>
-                </div>
-            </div>
-        </div>
+          <div class="modal-content" id="cocktail"></div>
+          <span class="close">&times;</span>
+          <div class="closed" id="container">
+              <header id="toggle"></header>
+              <div id="overlay"></div>  
+          </div>          
+      </div>
     </div>
-    <form class="pure-form pure-form-stacked">
+    <form class="pure-form pure-form-stacked ">
         <fieldset>
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-md-1-3">
-                    <label for="stacked-categories">Category</label>
-                    <select id="stacked-categories" class="pure-input-1-2">
-                        <option>General Knowledge</option>
-                        <option>Film</option>
-                        <option>Music</option>
-                        <option>TV</option>
-                        <option>Video Games</option>
-                        <option>Sports</option>
-                    </select>
-                    <label for="stacked-remember" class="pure-checkbox">
-                </div>
-                <div class="pure-u-1 pure-u-md-1-3">
-                    <label for="stacked-difficulty">Select Your Difficulty</label>
-                    <select id="stacked-difficulty" class="pure-input-1-2">
-                        <option>Easy</option>
-                        <option>Medium</option>
-                        <option>Hard</option>
-                    </select>
-                    <label for="stacked-remember" class="pure-checkbox">
-                </div>
-                <div class="pure-u-1 pure-u-md-1-3">
-                    <label for="multi-how-many">How many Questions(max of 50)?</label>
-                    <input type="text" id="multi-how-many" class="pure-u-1-2" />
-                </div>
-                <div class="pure-u-1 pure-u-md-1-3">
-                    <button type="submit" class="pure-button pure-button-primary" id="startQuizButton">Start
-                        Quiz</button>
 
-                </div>
-                <div id="quiz">
-                    <div id="question-block" class="py-2 h5">
-                        <p id="question-text">Questions Placeholder</p>
-                    </div>
-                    <div id="options">
-                        <button id="a" onclick="checkAnswer('a')" class="options"> </button>
+          <div class="pure-g">
+              <div class="pure-u-1 pure-u-md-1-3" id="categories">
+                  <label for="stacked-categories">Category</label>
+                  <select id="stacked-categories" class="pure-input-1-2">
+                      <option>General Knowledge</option>
+                      <option>Film</option>
+                      <option>Music</option>
+                      <option>TV</option>
+                      <option>Video Games</option>
+                      <option>Sports</option>
+                  </select>
+                  <label for="stacked-remember" class="pure-checkbox">
+              </div>
+              <div class="pure-u-1 pure-u-md-1-3" id="difficulties">
+                  <label for="stacked-difficulty">Select Your Difficulty</label>
+                  <select id="stacked-difficulty" class="pure-input-1-2">
+                      <option>Easy</option>
+                      <option>Medium</option>
+                      <option>Hard</option>
+                  </select>
+                  <label for="stacked-remember" class="pure-checkbox">
+              </div>
+              <div class="pure-u-1 pure-u-md-1-3" id="question-count">
+                  <label for="multi-how-many">How many Questions(max of 50)?</label>
+                  <input type="text" id="multi-how-many" class="pure-u-1-2" />
+              </div>
+              <div class="pure-u-1 pure-u-md-1-3" id="startquiz">
+                <button type="submit" class="pure-button pure-button-primary" id="startQuizButton" >Start Quiz</button>
+              </div>
+              
+            
+              <div id="quiz">
+                  <div id="question-block" class="py-2 h5">
+                      <div class="quiz-container">
+                          <div id="game" class="justify-center flex-column hidden">
+                          <h2 id="question"></h2>
+                          <div class="choice-container">
+                              <p class="choice-prefix">A</p>
+                              <p class="choice-text" data-number="1"></p>
+                          </div>
+                          <div class="choice-container">
+                              <p class="choice-prefix">B</p>
+                              <p class="choice-text" data-number="2"></p>
+                          </div>
+                          <div class="choice-container">
+                              <p class="choice-prefix">C</p>
+                              <p class="choice-text" data-number="3"></p></p>
+                          </div>
+                          <div class="choice-container">
+                              <p class="choice-prefix">D</p>
+                              <p class="choice-text" data-number="4"></p>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+                  <button class="hide" id="next">Next Question</button>
+              </div>
 
-                        <button id="b" onclick="checkAnswer('b')" class="options"> </button>
-
-                        <button id="c" onclick="checkAnswer('c')" class="options"> </button>
-
-                        <button id="d" onclick="checkAnswer('d')" class="options"> </button>
-                    </div>
-                </div>
             </div>
         </fieldset>
     </form>
     <div id="result"></div>
-
-
-    <script src="script.js"></script>
+    <div class="card">
+      <h1>ADD YOUR OWN RULES</h1>
+      <form id="rule-form" method="POST">
+        <label for="rule-text">Add a Rule: </label>
+        <input type="text" placeholder="Player needs to" name="rule-text" id="rule-text" />
+      </form>
+      <p>Rule Count: <span id="rule-count">0</span></p>
+      <ul id="rule-list"></ul>
+  
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 <footer>
+  <h2>Created by Steve, John, and Brendan</h2>
+  <p>&copy; Drinking Quiz Media</p>
 </footer>
 
 </html>
