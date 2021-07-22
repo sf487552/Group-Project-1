@@ -23,9 +23,12 @@ I also want to be able to replay and re-select categories and difficulty as many
 ```
 
 ## Screen-shot of deployed site
-
-
-
+![project-screen](https://user-images.githubusercontent.com/83721789/126708055-d721eb85-1eaa-4e63-997d-a8f04627e37f.jpg)
 
 ## Link to deployed site
+Repository:
+https://github.com/sf487552/Group-Project-1
+
+Deployed Site:
+https://sf487552.github.io/Group-Project-1/
 
