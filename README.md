@@ -1,4 +1,5 @@
-# Group-Project-1# Group-Project-1
+# Group-Project-1
+
 
 You know what's fun?  Trivia, it's incredibly popular to play no matter where you go.  It's also a good way to spend time with friends, especially if you include some drinks!
 As such, we have decided to build a fun, stress free trivia game that allows users to select their own category and difficulty to enable more and more fun!
@@ -26,6 +27,12 @@ I also want to be able to replay and re-select categories and difficulty as many
 
 
 
+
 ## Link to deployed site
 https://github.com/sf487552/Group-Project-1
 https://sf487552.github.io/Group-Project-1/
+
+
+
+
+
