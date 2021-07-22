@@ -578,20 +578,3 @@ li button {
   width: 80vw;
 }
 
-
-/*Rule list*/
-#rule-list li span {
-  overflow: hidden;
-}
-
-#rule-list li {
-  display: flex;
-  justify-content: space-between;
-}
-
-#rule-list button {
-  float: right;
-  justify-self: self-end;
-  display: relative;
-  right: 0;
-}
