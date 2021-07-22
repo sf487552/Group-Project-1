@@ -100,62 +100,63 @@ max - 50
 //Quiz variables
 var categories = document.getElementById("stacked-categories")
 var difficulty = document.getElementById("stacked-difficulty")
+var amount = document.getElementById("multi-how-many")
 //var numQuest = document.getElementById("field-questions")
 console.log(categories.value)
 console.log(difficulty.value)
 
 //Function for start quiz and get appropriate menu selections
-function startQuiz(){
+function startQuiz() {
 
   if (categories.value === "General Knowledge") {
-        categories = "9"
-    
-  } else if 
-      (categories.value === "Film") {
-        categories = "11"
-      } else if 
-      (categories.value === "Music") {
-        categories = "12" 
-      } else if 
-      (categories.value === "TV") {
-        categories = "14"
-      } else if 
-      (categories.value === "Videogames") {
-        categories = "15"
-      } else {
-      (categories.value === "Sports") 
-        categories = "21"
-      }
-      console.log("https://opentdb.com/api.php?amount=25&category=" + categories + "&difficulty=" + difficulty.value.toLowerCase() + "&type=multiple")
- 
+    categories = "9"
+
+  } else if
+    (categories.value === "Film") {
+    categories = "11"
+  } else if
+    (categories.value === "Music") {
+    categories = "12"
+  } else if
+    (categories.value === "TV") {
+    categories = "14"
+  } else if
+    (categories.value === "Videogames") {
+    categories = "15"
+  } else {
+    (categories.value === "Sports")
+    categories = "21"
+  }
+  console.log("https://opentdb.com/api.php?amount=" + amount.value + "&category=" + categories + "&difficulty=" + difficulty.value.toLowerCase() + "&type=multiple")
+
   //Quiz api fetch 
-   fetch("https://opentdb.com/api.php?amount=5&category=" + categories + "&difficulty=" + difficulty.value.toLowerCase() + "&type=multiple")
-  
-  //populate the quiz block with the category and questions 
- .then(res => {
-     return res.json();
-   })
-   .then(data => {
-     console.log(data);
-     for (let i = 0; i < data.results.length; i++) {
-       question.textContent = data.results[i].question
-       opt1.innerHTML = "A: " + data.results[i].correct_answer;
-       opt2.innerHTML = "B: " + data.results[i].incorrect_answers[0];
-       opt3.innerHTML = "C: " + data.results[i].incorrect_answers[1];
-       opt4.innerHTML = "D: " + data.results[i].incorrect_answers[2];
-    };
-       
-     })
+  fetch("https://opentdb.com/api.php?amount=" + amount.value + "&category=" + categories + "&difficulty=" + difficulty.value.toLowerCase() + "&type=multiple")
+
+    //populate the quiz block with the category and questions 
+    .then(res => {
+      return res.json();
+    })
+    .then(data => {
+      console.log(data);
+      for (let i = 0; i < data.results.length; i++) {
+        question.textContent = data.results[i].question
+        opt1.innerHTML = "A: " + data.results[i].correct_answer;
+        opt2.innerHTML = "B: " + data.results[i].incorrect_answers[0];
+        opt3.innerHTML = "C: " + data.results[i].incorrect_answers[1];
+        opt4.innerHTML = "D: " + data.results[i].incorrect_answers[2];
+      };
+
+    })
   startQuizDiv.style.display = "none";
   quizBody.style.display = "block";
 }
 
 //START QUIZ
-startQuizButton.addEventListener("click",function(event) {
-event.preventDefault()
-startQuiz()
+startQuizButton.addEventListener("click", function (event) {
+  event.preventDefault()
+  startQuiz()
 });
-  
+
 
 var drinkButton = document.getElementById("modal-drink")
 
@@ -220,13 +221,13 @@ function displayCocktail(myModal) {
       modal.html(result);
     }
   })
+
+  $.ajax({
+    url: "https://www.thecocktaildb.com/api/json/v1/1/random.php" + myModal,
+    type: "GET",
+    success: function (result) {
+      var modal = $("mod-content");
+      modal.html(result);
+    }
+  })
 }
-    $.ajax({
-        url: "https://www.thecocktaildb.com/api/json/v1/1/random.php" + myModal,
-        type:"GET" ,
-        success: function (result) {
-            var modal = $("mod-content");
-            modal.html (result);
-        }
-    })
-  }
