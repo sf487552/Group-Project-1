@@ -133,7 +133,7 @@ function startQuiz() {
     (categories.value === "TV") {
     categories = "14"
   } else if
-    (categories.value === "Videogames") {
+    (categories.value === "Video games") {
     categories = "15"
   } else {
     (categories.value === "Sports")
